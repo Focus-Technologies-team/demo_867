@@ -45,7 +45,7 @@ export default function App() {
                 src={APP_STORE_IMG}
                 width={199}
                 height={55}
-                alt="google play"
+                alt="apple store image"
                 style={{ objectFit: "cover" }}
               />
             </div>
