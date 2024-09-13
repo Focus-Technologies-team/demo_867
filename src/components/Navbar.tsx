@@ -1,12 +1,16 @@
 import { useState } from "react";
-import { BUSINESS_LOGO } from "../constants";
 
 export default function Navbar() {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
   return (
     <nav className="bg-white w-full h-[100px] border">
       <div className="w-full h-full sm:justify-around justify-between px-2 flex items-center">
-        <img src={BUSINESS_LOGO} width={126} height={25} alt="logo" />
+        <img
+          src="/business-logo-yellow.svg"
+          width={126}
+          height={25}
+          alt="logo"
+        />
         <div className="hidden md:block">
           <ul className="flex w-[411px] justify-between">
             <li>
