@@ -6,6 +6,7 @@ import {
   APP_STORE_IMG,
   GATHERING_IMG,
   GIRL_TYPING_PIC,
+  GOOGLE_PLAY_IMG,
   LARA_PROFILE,
   RIGHT_ARROW,
   WOMEN_IN_SUITS,
@@ -34,7 +35,7 @@ export default function App() {
             </button>
             <div className="mt-[92px] mb-[37px] flex sm:flex-row flex-col flex-wrap justify-center items-center sm:gap-[54px] gap-3">
               <img
-                src="/google-play.png"
+                src={GOOGLE_PLAY_IMG}
                 width={224}
                 height={87}
                 alt="google play"
