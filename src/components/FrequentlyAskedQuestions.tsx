@@ -8,7 +8,7 @@ export default function FrequentlyAskedQuestions() {
       </p>
       <div className="flex 2xl:flex-nowrap flex-wrap w-full bg-white items-center justify-center mt-[48px] px-[50px] md:px-[100px]">
         <div className="flex flex-col w-full">
-          <div className="flex flex-col w-full min-h-[482px]">
+          <div className="flex flex-col justify-center w-full min-h-[482px]">
             {[1, 2, 3, 4, 5].map((_, idx) => {
               return (
                 <div
