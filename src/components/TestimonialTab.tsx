@@ -15,13 +15,13 @@ export default function TestimonialTab() {
             />
           </div>
           <div className="flex flex-col gap-3 font-normal">
-            <p className="text-lg">Lara Angel</p>
-            <p className="text-sm">Entrepreneur</p>
+            <p className="md:text-lg text-sm">Lara Angel</p>
+            <p className="md:text-sm text-xs">Entrepreneur</p>
           </div>
         </div>
         <div className="mt-[40px] flex flex-col gap-5">
-          <p className="text-[18px]">Strategy Planning</p>
-          <p style={{ fontFamily: "Inter" }} className="text-lg">
+          <p className="md:text-lg text-sm">Strategy Planning</p>
+          <p style={{ fontFamily: "Inter" }} className="md:text-lg text-sm">
             Lorem ipsum dolor sit amet consectetur. Massa ipsum quam amet amet
             mi odio tempor. Lorem ipsum dolor sit amet consecteturLorem ipsum
             dolor sit amet consectetur. Massa ipsum quam amet amet mi odi
