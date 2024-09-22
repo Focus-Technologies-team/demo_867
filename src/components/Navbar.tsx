@@ -4,8 +4,8 @@ import { BUSINESS_LOGO } from "../constants";
 export default function Navbar() {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
   return (
-    <nav className="bg-white w-full h-[100px] border">
-      <div className="w-full h-full sm:justify-around justify-between px-2 flex items-center">
+    <nav className="bg-white w-full h-[100px] border z-50 fixed top-0 right-0 left-0 mb-72">
+      <div className="w-full h-full md:justify-around justify-between px-2 flex items-center">
         <img
           src={BUSINESS_LOGO}
           width={126}
@@ -37,7 +37,7 @@ export default function Navbar() {
           </ul>
         </div>
         <div className="hidden md:block">
-          <div className="space-x-[10px]">
+          <div className="flex">
             <button className="bg-white font-normal text-black text-[20px] w-[116px] h-[40px]">
               Login
             </button>
