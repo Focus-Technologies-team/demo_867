@@ -87,7 +87,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex justify-start px-[50px] sm:px-[100px]">
+      <div className="flex justify-start px-2 md:px-[100px]">
         <hr className="w-full border border-[#CCCCCC] mt-[5px]" />
       </div>
       <div className="flex justify-center w-full gap-2 md:text-lg text-sm py-[32px] font-normal text-white">

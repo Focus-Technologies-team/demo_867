@@ -3,7 +3,7 @@ import { WOMEN_IN_SUITS } from "../constants";
 export default function ContactUs() {
   return (
     <div className="mt-[100px] w-full">
-      <div className="w-full flex items-center justify-center flex-wrap gap-20 md:px-[100px] px-[50px]">
+      <div className="w-full flex items-center justify-center flex-wrap 2xl:gap-20 md:px-[100px] px-2">
         <img
           className="2xl:pl-[100px]"
           src={WOMEN_IN_SUITS}

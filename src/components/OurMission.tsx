@@ -2,8 +2,8 @@ import { GIRL_TYPING_PIC } from "../constants";
 
 export default function OurMission() {
   return (
-    <div className="flex flex-col gap-4 w-full relative bg-white justify-center items-center md:px-0 px-[50px]">
-      <div className="bg-[#F2F2F2A6] w-full flex flex-col justify-center items-center px-[50px] md:px-[100px] py-[38px] md:rounded-none rounded-md">
+    <div className="flex flex-col w-full relative bg-white justify-center items-center">
+      <div className="bg-[#F2F2F2A6] w-full flex flex-col justify-center items-center px-2 md:px-[100px] py-[38px] md:rounded-none rounded-md">
         <div className="flex flex-col text-black justify-center items-center 2xl:items-start gap-[24px] w-full">
           <p className="font-normal md:text-4xl text-2xl text-center text-wrap">
             Our Mission
@@ -23,7 +23,7 @@ export default function OurMission() {
         </div>
       </div>
       <img
-        className="2xl:absolute mt-0 right-[100px]"
+        className="2xl:absolute mt-0 px-2 right-[100px]"
         src={GIRL_TYPING_PIC}
         width={648}
         height={423}

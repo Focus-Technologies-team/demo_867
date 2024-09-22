@@ -4,7 +4,7 @@ import { BUSINESS_LOGO } from "../constants";
 export default function Navbar() {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
   return (
-    <nav className="bg-white w-full h-[100px] border z-50 fixed top-0 right-0 left-0 mb-72">
+    <nav className="bg-white flex justify-center items-center w-full min-h-[100px] border z-50 sticky top-0 right-0 left-0">
       <div className="w-full h-full md:justify-around justify-between px-2 flex items-center">
         <img
           src={BUSINESS_LOGO}

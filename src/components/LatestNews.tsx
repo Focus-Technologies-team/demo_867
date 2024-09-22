@@ -6,7 +6,7 @@ export default function LatestNews() {
       <p className="font-normal md:text-5xl text-4xl text-center mb-[46px] mt-[85px]">
         Our Latest News
       </p>
-      <div className="flex flex-wrap justify-center items-center gap-[43px] mb-[100px] md:px-[125px] px-[62px]">
+      <div className="flex flex-wrap justify-center items-center gap-[43px] mb-[100px] md:px-[125px] px-2">
         <ManagementTab />
       </div>
     </div>

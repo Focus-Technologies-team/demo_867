@@ -2,7 +2,7 @@ import TestimonialTab from "./TestimonialTab";
 
 export default function Testimonials() {
   return (
-    <div className="mt-[100px] flex flex-col justify-center items-center w-full md:px-[100px] px-[50px]">
+    <div className="mt-[100px] flex flex-col justify-center items-center w-full md:px-[100px] px-2">
       <p className="font-normal md:text-5xl text-4xl text-center mb-[40px]">
         Testimonials
       </p>

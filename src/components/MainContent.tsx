@@ -9,7 +9,7 @@ import Testimonials from "./Testimonials";
 import ContactUs from "./ContactUs";
 export default function MainContent() {
   return (
-    <main className="w-full h-full mt-24">
+    <main className="w-full h-full">
       <GetStarted />
       <div className="-translate-y-9">
         <div className="mx-auto bg-white min-h-[287px] py-12 px-[82px] max-w-[1384px] rounded-t-[20px] md:rounded-[20px]">
