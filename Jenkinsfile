@@ -5,9 +5,9 @@ pipeline {
     }
     stages {
         stage('Build frontend') {
-            cleanWs()
-            checkout scm
             steps {
+                cleanWs()
+                checkout scm
                 script {
                     sh 'npm install'
                     sh 'npm run build'
