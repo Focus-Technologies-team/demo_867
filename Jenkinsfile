@@ -1,13 +1,13 @@
 pipeline {
     agent { label 'agent1' }
-    options {
-        skipDefaultCheckout()
-    }
+    // options {
+    //     skipDefaultCheckout()
+    // }
     stages {
         stage('Build frontend') {
             steps {
                 // cleanWs() 
-                checkout scm 
+                // checkout scm 
                 script {
                     sh 'npm install'
                     sh 'npm run build'
