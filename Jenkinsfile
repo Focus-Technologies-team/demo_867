@@ -6,21 +6,23 @@ pipeline {
     stages {
         stage('Build frontend') {
             steps {
-                // cleanWs() 
-                // checkout scm 
+                // cleanWs()
+                // checkout scm
                 script {
-                     sh 'echo $SHELL'
-                    // sh 'npm install'
-                    // sh 'npm run build'
-                    // // Check if 'dist' exists and copy files
-                    // sh '''
-                    // if [ -d "dist" ]; then
-                    //     cp -r dist/* /var/www/focustechnologies
-                    // else
-                    //     echo "Build failed: dist directory not found"
-                    //     exit 1
-                    // fi
-                    // '''
+                    sh 'env'
+                    sh 'bash --version || echo "Bash not found"'
+                    sh 'sh --version || echo "Sh not found"'
+                // sh 'npm install'
+                // sh 'npm run build'
+                // // Check if 'dist' exists and copy files
+                // sh '''
+                // if [ -d "dist" ]; then
+                //     cp -r dist/* /var/www/focustechnologies
+                // else
+                //     echo "Build failed: dist directory not found"
+                //     exit 1
+                // fi
+                // '''
                 }
             }
         }
@@ -33,9 +35,9 @@ pipeline {
         failure {
             echo 'Pipeline failed.'
         }
-        // always {
-        //     cleanWs(cleanWhenNotBuilt: false, deleteDirs: true, notFailBuild: true)
-        //     echo 'Pipeline finished.'
-        // }
+    // always {
+    //     cleanWs(cleanWhenNotBuilt: false, deleteDirs: true, notFailBuild: true)
+    //     echo 'Pipeline finished.'
+    // }
     }
 }
