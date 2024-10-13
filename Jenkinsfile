@@ -9,11 +9,19 @@ pipeline {
                 // cleanWs()
                 // checkout scm
                 script {
-                    sh '''
+                sh '''
                     #!/bin/bash
                     export NVM_DIR="$HOME/.nvm"
-                    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-                    npm --version  # Check npm version
+                    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+                    # Check NVM version
+                    nvm --version || echo "NVM not found"
+                    
+                    # Install Node.js if needed
+                    nvm install 20
+                    
+                    # Check NPM version
+                    npm --version || echo "NPM not found"
                 '''
                 // sh 'npm install'
                 // sh 'npm run build'
