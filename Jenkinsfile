@@ -11,15 +11,6 @@ pipeline {
                 script {
                 sh '''
                     #!/bin/bash
-                    export NVM_DIR="$HOME/.nvm"
-                    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-                    # Check NVM version
-                    nvm --version || echo "NVM not found"
-                    
-                    # Install Node.js if needed
-                    nvm install 20
-                    
                     # Check NPM version
                     npm --version || echo "NPM not found"
                 '''
