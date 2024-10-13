@@ -12,7 +12,7 @@ pipeline {
                 sh '''
                     #!/bin/bash
                     # Check NPM version
-                    npm --version || echo "NPM not found"
+                    npm --version || echo "NPM nofound"
                 '''
                 // sh 'npm install'
                 // sh 'npm run build'
