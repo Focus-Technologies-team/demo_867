@@ -9,7 +9,7 @@ pipeline {
                 // cleanWs() 
                 // checkout scm 
                 script {
-                    sh 'npm --version'
+                    sh 'source ~/.bashrc && nvm use 20'
                     // sh 'npm install'
                     // sh 'npm run build'
                     // // Check if 'dist' exists and copy files
