@@ -4,7 +4,7 @@ pipeline {
         skipDefaultCheckout()
     }
     stages {
-                stage('Install Node.js and npm') {
+        stage('Install Node.js and npm') {
             steps {
                 script {
                     sh '''
@@ -13,8 +13,8 @@ pipeline {
                         if ! command -v node &> /dev/null; then
                             echo "Node.js not found. Installing..."
                             # Install Node.js (choose a method that suits your environment)
-                            curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-                            sudo apt-get install -y nodejs
+                            curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+                            apt-get install -y nodejs
                         else
                             echo "Node.js is already installed."
                         fi
@@ -22,20 +22,20 @@ pipeline {
                         # Check if npm is installed
                         if ! command -v npm &> /dev/null; then
                             echo "npm not found. Installing..."
-                            sudo apt-get install -y npm
+                            apt-get install -y npm
                         else
                             echo "npm is already installed."
                         fi
                     '''
                 }
             }
-        }
+                }
         stage('Build frontend') {
             steps {
                 cleanWs()
                 checkout scm
                 script {
-                sh '''
+                    sh '''
                     #!/bin/bash
                     npm --version || echo "NPM not found"
                 '''
@@ -62,9 +62,9 @@ pipeline {
         failure {
             echo 'Pipeline failed.'
         }
-    always {
-        cleanWs(cleanWhenNotBuilt: false, deleteDirs: true, notFailBuild: true)
-        echo 'Pipeline finished.'
-    }
+        always {
+            cleanWs(cleanWhenNotBuilt: false, deleteDirs: true, notFailBuild: true)
+            echo 'Pipeline finished.'
+        }
     }
 }
