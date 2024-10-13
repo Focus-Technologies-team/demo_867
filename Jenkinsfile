@@ -20,6 +20,11 @@ pipeline {
                 cleanWs()
                 checkout scm
                 script {
+                    sh '''
+                        #!/bin/bash
+                        node --version
+                        npm --version
+                    '''
                 // sh 'npm install'
                 // sh 'npm run build'
                 // // Check if 'dist' exists and copy files
