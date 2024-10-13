@@ -6,13 +6,20 @@ pipeline {
     stages {
         stage('Build frontend') {
             steps {
-                cleanWs()
-                checkout scm
+                cleanWs() 
+                checkout scm 
                 script {
                     sh 'npm install'
                     sh 'npm run build'
-                    sh 'cd dist'
-                    sh 'cp -r * /home/focustechnologies/htdocs/focustechnologies.org'
+                    // Check if 'dist' exists and copy files
+                    sh '''
+                    if [ -d "dist" ]; then
+                        cp -r dist/* /var/www/focustechnologies
+                    else
+                        echo "Build failed: dist directory not found"
+                        exit 1
+                    fi
+                    '''
                 }
             }
         }
