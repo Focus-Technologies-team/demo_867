@@ -9,9 +9,12 @@ pipeline {
                 // cleanWs()
                 // checkout scm
                 script {
-                    sh 'env'
-                    sh 'bash --version || echo "Bash not found"'
-                    sh 'sh --version || echo "Sh not found"'
+                    sh '''
+                    #!/bin/bash
+                    export NVM_DIR="$HOME/.nvm"
+                    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+                    npm --version  # Check npm version
+                '''
                 // sh 'npm install'
                 // sh 'npm run build'
                 // // Check if 'dist' exists and copy files
