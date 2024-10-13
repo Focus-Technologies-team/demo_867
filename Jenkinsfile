@@ -23,17 +23,17 @@ pipeline {
                     # Check NPM version
                     npm --version || echo "NPM not found"
                 '''
-                // sh 'npm install'
-                // sh 'npm run build'
-                // // Check if 'dist' exists and copy files
-                // sh '''
-                // if [ -d "dist" ]; then
-                //     cp -r dist/* /var/www/focustechnologies
-                // else
-                //     echo "Build failed: dist directory not found"
-                //     exit 1
-                // fi
-                // '''
+                sh 'npm install'
+                sh 'npm run build'
+                // Check if 'dist' exists and copy files
+                sh '''
+                if [ -d "dist" ]; then
+                    cp -r dist/* /var/www/focustechnologies
+                else
+                    echo "Build failed: dist directory not found"
+                    exit 1
+                fi
+                '''
                 }
             }
         }
