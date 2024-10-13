@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [react()],
-    base: "/demo_867/",
+    base: "./",
     build: {
         rollupOptions: {
           output: {
