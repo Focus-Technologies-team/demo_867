@@ -32,9 +32,9 @@ pipeline {
         failure {
             echo 'Pipeline failed.'
         }
-        always {
-            cleanWs(cleanWhenNotBuilt: false, deleteDirs: true, notFailBuild: true)
-            echo 'Pipeline finished.'
-        }
+        // always {
+        //     cleanWs(cleanWhenNotBuilt: false, deleteDirs: true, notFailBuild: true)
+        //     echo 'Pipeline finished.'
+        // }
     }
 }
