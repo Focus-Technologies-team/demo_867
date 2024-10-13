@@ -16,7 +16,7 @@ pipeline {
                 if [ -d "dist" ]; then
                     cp -r dist/* /var/www/focustechnologies
                 else
-                    echo "Build failed: dist directory not found"
+                    echo "Build gfailed: dist directory not found"
                     exit 1
                 fi
                 '''
