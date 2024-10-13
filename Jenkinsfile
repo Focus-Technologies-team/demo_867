@@ -4,7 +4,7 @@ pipeline {
         skipDefaultCheckout()
     }
     stages {
-        state('Build frontend') {
+        stage('Build frontend') {
             cleanWs()
             checkout scm
             steps {
