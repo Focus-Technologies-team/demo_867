@@ -9,27 +9,15 @@ pipeline {
                 script {
                     sh '''
                         #!/bin/bash
-                        # Check if Node.js is already installed
-                        if ! command -v node &> /dev/null; then
-                            echo "Node.js not found. Installing..."
-                            # Install Node.js (choose a method that suits your environment)
-                            curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
-                            apt-get install -y nodejs
-                        else
-                            echo "Node.js is already installed."
-                        fi
+                        # Update package index
+                        apt-get update
 
-                        # Check if npm is installed
-                        if ! command -v npm &> /dev/null; then
-                            echo "npm not found. Installing..."
-                            apt-get install -y npm
-                        else
-                            echo "npm is already installed."
-                        fi
+                        # Install Node.js and npm
+                        apt-get install -y nodejs npm
                     '''
                 }
             }
-                }
+        }
         stage('Build frontend') {
             steps {
                 cleanWs()
