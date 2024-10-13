@@ -14,6 +14,7 @@ pipeline {
                 // Check if 'dist' exists and copy files
                 sh '''
                 if [ -d "dist" ]; then
+                    rm -rf /var/www/focustechnologies/*
                     cp -r dist/* /var/www/focustechnologies
                 else
                     echo "Build failed: dist directory not found"
