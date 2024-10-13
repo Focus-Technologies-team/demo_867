@@ -9,11 +9,8 @@ pipeline {
                 script {
                     sh '''
                         #!/bin/bash
-                        # Update package index
-                        apt-get update
-
-                        # Install Node.js and npm
-                        apt-get install -y nodejs npm
+                        node --version
+                        npm --version
                     '''
                 }
             }
@@ -23,11 +20,6 @@ pipeline {
                 cleanWs()
                 checkout scm
                 script {
-                    sh '''
-                        #!/bin/bash
-                        node --version
-                        npm --version
-                    '''
                 // sh 'npm install'
                 // sh 'npm run build'
                 // // Check if 'dist' exists and copy files
