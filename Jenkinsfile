@@ -25,19 +25,6 @@ pipeline {
                 script {
                     sh '''
                         #!/bin/bash
-                        # Update package index
-                        apt-get update
-
-                        # Install required dependencies
-                        apt-get install -y apt-transport-https curl gnupg
-
-                        # Install NodeSource Node.js repository
-                        curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
-
-                        # Install Node.js and npm
-                        apt-get install -y nodejs
-
-                        # Verify installation
                         node --version
                         npm --version
                     '''
